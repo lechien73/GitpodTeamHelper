@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Gitpod Team Admin",
+    "description": "Helper for managing the Gitpod Team",
+    "version": "0.0.1",
+    "browser_action": {
+        "default_popup": "gpadmin.html",
+        "default_title": "GpAdminHelper"
+    },
+    "permissions": [
+        "storage",
+        "*://*.gitpod.io/teams*",
+        "*://gitpod.io/teams*"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "*://*.gitpod.io/teams*",
+            "*://gitpod.io/teams*"
+        ],
+        "js": [
+            "js/find_things.js"
+        ]
+    }]
+}

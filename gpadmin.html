@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gitpod Team Admin</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .wrapper {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            justify-content: space-around;
+            text-align: center;
+            align-items: center;
+            color: #515151;
+            padding-bottom: 20px;
+        }
+
+        .tiny-text {
+            font-size: 10px;
+        }
+
+        #title {
+            font-size: 16px;
+            color: #CB2128;
+            font-weight: 500;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .toggle {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 52px;
+            background-color: red;
+            border-radius: 30px;
+            border: 2px white;
+        }
+
+        .toggle:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            top: 1px;
+            left: 1px;
+            transition: all 0.5s;
+        }
+
+        .switch-text {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+
+        .checkbox:checked+.toggle::after {
+            left: 49px;
+        }
+
+        .checkbox:checked+.toggle {
+            background-color: green;
+        }
+
+        .checkbox {
+            display: none;
+        }
+
+        .text-container {
+            padding: 10px;
+        }
+
+        section {
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <section>
+            <div id="title">
+                Gitpod Team Admin
+            </div>
+        </section>
+
+        <section>
+            <input type="checkbox" id="toggle" class="checkbox" />
+            <label for="toggle" class="toggle">
+                <p class="switch-text">ON&nbsp;&nbsp;&nbsp;&nbsp;OFF</p>
+            </label>
+
+
+            <div class="text-container" id="status">
+
+            </div>
+        </section>
+
+        <section>
+           
+        </section>
+
+    </div>
+    <script src="js/popup.js"></script>
+</body>
+
+
+</html>
