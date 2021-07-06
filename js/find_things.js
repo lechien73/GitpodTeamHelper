@@ -60,7 +60,7 @@
             }
 
             let newDiv = document.getElementsByClassName("pb-2")[0].nextElementSibling;
-            newDiv.firstChild.innerHTML = `Add members using their username prefixed by the Git Provider's host. Currently, we have <strong>${activeUserCount}</strong> active users with <strong>${inactiveUserCount}</strong> inactive. Inactive users are highlighted in green.`
+            newDiv.firstChild.innerHTML = `Add members using their username prefixed by the Git Provider's host. Currently, there are <strong>${activeUserCount}</strong> active users plus <strong>${inactiveUserCount}</strong> inactive. Inactive users are highlighted in green.`
         }
     }
 
