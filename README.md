@@ -2,7 +2,7 @@
 
 ## What is it?
 
-An unofficial Chrome/Brave extension to make administering Gitpod Teams easier.
+An unofficial Chrome/Brave extension to make administering Gitpod Teams easier, which can either be obtained from the [Chrome Web Store here](https://chrome.google.com/webstore/detail/gitpod-team-admin/pcecmmchknbagjicnbkfifajblnbbhlj) or sideloaded.
 
 Firstly, it adds text to the **Manage Teams** modal so that it lists the total active and total inactive users.
 
