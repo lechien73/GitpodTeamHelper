@@ -4,8 +4,8 @@
     const config = { attributes: true, childList: true, subtree: true };
     const searchString = "github.com/username";
 
-    let isDisabled = false;
     let hasRun = false;
+    let isDisabled = false;
 
     const callback = function(mutationsList, observer) {
         for (const mutation of mutationsList) {
@@ -24,10 +24,6 @@
     };
 
     function setCount() {
-
-        chrome.storage.sync.get('isDisabled', function(data) {
-            isDisabled = data.isDisabled;
-        });
 
         if (!isDisabled) {
             let inactiveUserCount = 0;
@@ -49,13 +45,19 @@
         }
     }
 
-    const observer = new MutationObserver(callback);
-
-    observer.observe(targetNode, config);
-
-    chrome.storage.sync.get('isDisabled', function(data) {
-        isDisabled = data.isDisabled;
-        console.log(isDisabled ? "GpTeamsAdmin disabled" : "GpTeamsAdmin active");
+    chrome.storage.sync.get(["isDisabled"], function(data) {
+        isDisabled = typeof(data.isDisabled) === "undefined" ? false : data.isDisabled;
+        console.log(isDisabled ? "GpTeamsHelper disabled" : "GpTeamsHelper active");
     });
+
+    chrome.storage.onChanged.addListener((changes, area) => {
+        if (area === "sync") {
+            isDisabled = changes.isDisabled.newValue;
+            console.log(isDisabled ? "GpTeamsHelper disabled" : "GpTeamsHelper active");
+        }
+    });
+
+    const observer = new MutationObserver(callback);
+    observer.observe(targetNode, config);
 
 })();

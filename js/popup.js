@@ -2,7 +2,7 @@
 let toggleSwitch = document.getElementById("toggle");
 let status = document.getElementById("status");
 
-chrome.storage.sync.get("isDisabled", function(data) {
+chrome.storage.sync.get(["isDisabled"], function(data) {
     toggleSwitch.checked = !data.isDisabled;
     setStatusText(data.isDisabled);
 });
