@@ -20,6 +20,16 @@ Oh no! Sorry about that. Please feel free to open an [issue at the GitHub repo](
 
 Please note that the extension is provided "as-is". No warranty or guarantee regarding suitability or compatibility is given. Use it at your own risk!
 
+## Sideloading
+
+If you want to sideload the extension, then do the following:
+
+1. Download the repo as a zip file and extract it
+2. Go to Chrome/Brave's extensions management page
+3. Switch on *Development Mode*
+4. Click on *Load Unpacked*
+5. Browse to the extracted extension folder and load it
+
 ## Privacy & Security
 
 The extension only works on the gitpod.io/teams page. It only stores enabled/disabled data - nothing else. It's as safe as houses.
