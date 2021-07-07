@@ -57,6 +57,10 @@ Performance boost and added icons too!
 
 Fix disable/enable extension switch.
 
+### 0.0.4
+
+Performance improvements.
+
 ## That's all folks!
 
 <a href="https://www.buymeacoffee.com/mattrudge" target="_blank"><img src="https://mattrudge.net/images/bmac.png" alt="Buy Matt A Coffee"></a>
