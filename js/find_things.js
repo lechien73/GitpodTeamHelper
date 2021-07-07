@@ -10,10 +10,9 @@
 
     const callback = function(mutationsList, observer) {
         for (const mutation of mutationsList) {
-            if (mutation.removedNodes) {
+            if (document.getElementsByClassName("overscroll-contain").length === 0) {
                 hasRun = false;
-            }
-            if (mutation.type === "childList") {
+            } else if (mutation.type === "childList") {
                 var hasClass = [].some.call(mutation.addedNodes, function(el) {
                     return "classList" in el ? el.classList.contains("pt-2") : null;
                 });
