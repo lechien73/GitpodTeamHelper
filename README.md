@@ -25,6 +25,7 @@ Please note that the extension is provided "as-is". No warranty or guarantee reg
 If you want to sideload the extension, then do the following:
 
 1. Download the repo as a zip file and extract it
+2. Delete the `_config.yml` file, which is for GitHub's theme
 2. Go to Chrome/Brave's extensions management page
 3. Switch on *Development Mode*
 4. Click on *Load Unpacked*
