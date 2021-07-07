@@ -52,6 +52,10 @@ Basic functionality working
 
 Performance boost and added icons too!
 
+### 0.0.3
+
+Fix disable/enable extension switch.
+
 ## That's all folks!
 
 <a href="https://www.buymeacoffee.com/mattrudge" target="_blank"><img src="https://mattrudge.net/images/bmac.png" alt="Buy Matt A Coffee"></a>

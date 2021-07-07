@@ -23,18 +23,12 @@
         }
     };
 
-    const observer = new MutationObserver(callback);
-
-    observer.observe(targetNode, config);
-
-
-    chrome.storage.sync.get('isDisabled', function(data) {
-        isDisabled = data.isDisabled;
-        console.log(isDisabled ? "GpTeamsAdmin disabled" : "GpTeamsAdmin active");
-    });
-
-
     function setCount() {
+
+        chrome.storage.sync.get('isDisabled', function(data) {
+            isDisabled = data.isDisabled;
+        });
+
         if (!isDisabled) {
             let inactiveUserCount = 0;
             let activeUserCount = 0;
@@ -51,8 +45,12 @@
             }
 
             let newDiv = document.getElementsByClassName("pb-2")[0].nextElementSibling;
-            newDiv.firstChild.innerHTML = `Add members using their username prefixed by the Git Provider's host. Currently, there are <strong>${activeUserCount}</strong> active users plus <strong>${inactiveUserCount}</strong> inactive. Inactive users are highlighted in green.`
+            newDiv.firstChild.innerHTML = `Add members using their username prefixed by the Git Provider's host. Currently, there are <strong>${activeUserCount}</strong> active users plus <strong>${inactiveUserCount}</strong> inactive.<br/>Inactive users are highlighted in green.`
         }
     }
+
+    const observer = new MutationObserver(callback);
+
+    observer.observe(targetNode, config);
 
 })();
