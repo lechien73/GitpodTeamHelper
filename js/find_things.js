@@ -6,7 +6,6 @@
 
     let isDisabled = false;
     let hasRun = false;
-    let hideActive = false;
 
     const callback = function(mutationsList, observer) {
         for (const mutation of mutationsList) {
@@ -34,10 +33,6 @@
         console.log(isDisabled ? "GpTeamsAdmin disabled" : "GpTeamsAdmin active");
     });
 
-    // Laters
-    // chrome.storage.sync.get('hideActive', function (data) {
-    //     hideActive = data.hideActive;
-    // });
 
     function setCount() {
         if (!isDisabled) {
@@ -52,9 +47,6 @@
                     tag.style.cssText = "background-color: lightgreen!important;"
                 } else if (tag.getAttribute("placeholder").indexOf(searchString) === -1) {
                     activeUserCount++;
-                    if (hideActive) {
-                        tag.parentElement.parentElement.style.cssText = "display: none!important;";
-                    }
                 }
             }
 
@@ -62,6 +54,5 @@
             newDiv.firstChild.innerHTML = `Add members using their username prefixed by the Git Provider's host. Currently, there are <strong>${activeUserCount}</strong> active users plus <strong>${inactiveUserCount}</strong> inactive. Inactive users are highlighted in green.`
         }
     }
-
 
 })();
