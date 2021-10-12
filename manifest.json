@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Gitpod Team Admin",
     "description": "Helper for managing the Gitpod Team.",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "action": {
         "default_popup": "gpadmin.html",
         "default_title": "Gitpod Team Helper"

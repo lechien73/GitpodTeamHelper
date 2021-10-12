@@ -63,6 +63,10 @@ Performance improvements.
 
 ### 0.0.5
 
+Performance improvements.
+
+### 0.0.6
+
 Add checking for deactivated users.
 
 ## That's all folks!
