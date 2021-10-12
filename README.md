@@ -61,6 +61,10 @@ Fix disable/enable extension switch.
 
 Performance improvements.
 
+### 0.0.5
+
+Add checking for deactivated users.
+
 ## That's all folks!
 
 <a href="https://www.buymeacoffee.com/mattrudge" target="_blank"><img src="https://mattrudge.net/images/bmac.png" alt="Buy Matt A Coffee"></a>

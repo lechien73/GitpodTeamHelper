@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     const targetNode = document.getElementById("root");
     const config = { attributes: true, childList: true, subtree: true };
@@ -7,12 +7,12 @@
     let hasRun = false;
     let isDisabled = false;
 
-    const callback = function(mutationsList, observer) {
+    const callback = function (mutationsList, observer) {
         for (const mutation of mutationsList) {
             if (document.getElementsByClassName("overscroll-contain").length === 0) {
                 hasRun = false;
             } else if (mutation.type === "childList") {
-                var hasClass = [].some.call(mutation.addedNodes, function(el) {
+                var hasClass = [].some.call(mutation.addedNodes, function (el) {
                     return "classList" in el ? el.classList.contains("pt-2") : null;
                 });
                 if (hasClass && !hasRun) {
@@ -32,10 +32,10 @@
             let userTags = document.getElementsByTagName("input");
 
             for (let tag of userTags) {
-                if (tag.getAttribute("placeholder").indexOf(searchString) > -1) {
+                if (tag.getAttribute("placeholder").indexOf(searchString) > -1 || tag.nextElementSibling.innerText = "Reactivate") {
                     inactiveUserCount++;
                     tag.style.cssText = "background-color: lightgreen!important;"
-                } else if (tag.getAttribute("placeholder").indexOf(searchString) === -1) {
+                } else if (tag.getAttribute("placeholder").indexOf(searchString) === -1 || tag.nextElementSibling.innerText = "Deactivate") {
                     activeUserCount++;
                 }
             }
@@ -45,8 +45,8 @@
         }
     }
 
-    chrome.storage.sync.get(["isDisabled"], function(data) {
-        isDisabled = typeof(data.isDisabled) === "undefined" ? false : data.isDisabled;
+    chrome.storage.sync.get(["isDisabled"], function (data) {
+        isDisabled = typeof (data.isDisabled) === "undefined" ? false : data.isDisabled;
         console.log(isDisabled ? "GpTeamsHelper disabled" : "GpTeamsHelper active");
     });
 
