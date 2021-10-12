@@ -12,13 +12,17 @@
     ],
     "host_permissions": [
         "*://*.gitpod.io/teams*",
-        "*://gitpod.io/teams*"
+        "*://gitpod.io/teams*",
+        "*://*.gitpod.io/*",
+        "*://gitpod.io/*"
     ],
     "content_scripts": [
         {
             "matches": [
                 "*://*.gitpod.io/teams*",
-                "*://gitpod.io/teams*"
+                "*://gitpod.io/teams*",
+                "*://*.gitpod.io/*",
+                "*://gitpod.io/*"
             ],
             "js": [
                 "js/find_things.js"

@@ -63,7 +63,7 @@ Performance improvements.
 
 ### 0.0.5
 
-Performance improvements.
+Expand host permissions.
 
 ### 0.0.6
 
