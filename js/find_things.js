@@ -32,10 +32,10 @@
             let userTags = document.getElementsByTagName("input");
 
             for (let tag of userTags) {
-                if (tag.getAttribute("placeholder").indexOf(searchString) > -1 || tag.nextElementSibling.innerText = "Reactivate") {
+                if (tag.getAttribute("placeholder").indexOf(searchString) > -1 || tag.nextElementSibling.innerText === "Reactivate") {
                     inactiveUserCount++;
                     tag.style.cssText = "background-color: lightgreen!important;"
-                } else if (tag.getAttribute("placeholder").indexOf(searchString) === -1 || tag.nextElementSibling.innerText = "Deactivate") {
+                } else if (tag.getAttribute("placeholder").indexOf(searchString) === -1 || tag.nextElementSibling.innerText === "Deactivate") {
                     activeUserCount++;
                 }
             }
