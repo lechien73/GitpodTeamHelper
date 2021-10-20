@@ -61,8 +61,6 @@
         }
     });
 
-    if (!isDisabled) {
-        const observer = new MutationObserver(callback);
-        observer.observe(targetNode, config);
-    }
+    const observer = new MutationObserver(callback);
+    observer.observe(targetNode, config);
 })();
