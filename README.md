@@ -69,6 +69,10 @@ Expand host permissions.
 
 Add checking for deactivated users.
 
+### 0.0.7
+
+Limit scope to teams page to prevent console errors.
+
 ## That's all folks!
 
 <a href="https://www.buymeacoffee.com/mattrudge" target="_blank"><img src="https://mattrudge.net/images/bmac.png" alt="Buy Matt A Coffee"></a>

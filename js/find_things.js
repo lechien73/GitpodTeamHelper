@@ -7,6 +7,10 @@
     let hasRun = false;
     let isDisabled = false;
 
+    if (window.location.href !== "https://gitpod.io./teams") {
+        isDisabled = true;
+    }
+
     const callback = function (mutationsList, observer) {
         for (const mutation of mutationsList) {
             if (document.getElementsByClassName("overscroll-contain").length === 0) {
@@ -57,7 +61,8 @@
         }
     });
 
-    const observer = new MutationObserver(callback);
-    observer.observe(targetNode, config);
-
+    if (!isDisabled) {
+        const observer = new MutationObserver(callback);
+        observer.observe(targetNode, config);
+    }
 })();

@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Gitpod Team Admin",
     "description": "Helper for managing the Gitpod Team.",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "action": {
         "default_popup": "gpadmin.html",
         "default_title": "Gitpod Team Helper"
@@ -12,17 +12,13 @@
     ],
     "host_permissions": [
         "*://*.gitpod.io/teams*",
-        "*://gitpod.io/teams*",
-        "*://*.gitpod.io/*",
-        "*://gitpod.io/*"
+        "*://gitpod.io/teams*"
     ],
     "content_scripts": [
         {
             "matches": [
                 "*://*.gitpod.io/teams*",
-                "*://gitpod.io/teams*",
-                "*://*.gitpod.io/*",
-                "*://gitpod.io/*"
+                "*://gitpod.io/teams*"
             ],
             "js": [
                 "js/find_things.js"
